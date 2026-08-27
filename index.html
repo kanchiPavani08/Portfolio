@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pavani | Portfolio</title>
+    <title>Kanchi Pavani | Full Stack Developer</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -14,7 +23,10 @@
     <!-- Navigation -->
     <header>
         <nav class="navbar">
-            <h2 class="logo">Pavani</h2>
+
+            <div class="logo">
+                Kanchi<span>.</span>
+            </div>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
@@ -25,60 +37,117 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <button id="themeBtn" class="theme-btn">🌙</button>
+            <div class="menu-icon" id="menuIcon">
+                <i class="fas fa-bars"></i>
+            </div>
 
-            <button id="menuBtn" class="menu-btn">☰</button>
         </nav>
     </header>
 
 
     <!-- Home -->
-    <section id="home" class="home">
+    <section id="home" class="hero">
 
-        <div class="home-content">
+        <div class="hero-content">
+
             <p class="hello">Hello, I'm</p>
 
-            <h1>Pavani Kanchi</h1>
+            <h1>Kanchi Pavani</h1>
 
-            <h2>Java & Web Developer</h2>
+            <h2>
+                <span id="typing"></span>
+            </h2>
 
-            <p>
-                I am a B.Tech graduate interested in software development
-                and building useful web applications.
+            <p class="hero-description">
+                B.Tech CSE graduate passionate about building
+                responsive and user-friendly web applications
+                using modern frontend and backend technologies.
             </p>
 
-            <div class="home-buttons">
-                <a href="#projects" class="btn">View Projects</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">
+                    View Projects
+                </a>
+
+                <a href="#contact" class="btn secondary-btn">
+                    Contact Me
+                </a>
             </div>
+
+            <div class="social-links">
+
+                <a href="https://github.com/kanchiPavani08"
+                   target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/pavani-kanchi-3344022a9"
+                   target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:pavanikanchi2004@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="profile">
-            <div class="profile-circle">
-                P
+        <div class="hero-image">
+
+            <div class="circle">
+                <i class="fas fa-code"></i>
             </div>
+
         </div>
 
     </section>
 
 
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section">
 
-        <h2 class="section-title">About Me</h2>
+        <div class="section-title">
+            <p>Get To Know Me</p>
+            <h2>About Me</h2>
+        </div>
 
-        <div class="about-content">
+        <div class="about-container">
 
-            <p>
-                I am a passionate software developer with an interest in
-                Java, JavaScript and web development. I enjoy creating
-                responsive and user-friendly applications.
-            </p>
+            <div class="about-card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Education</h3>
+                <p>B.Tech in Computer Science & Engineering</p>
+            </div>
 
-            <p>
-                I am continuously improving my programming skills by
-                building projects and learning new technologies.
-            </p>
+            <div class="about-card">
+                <i class="fas fa-code"></i>
+                <h3>Development</h3>
+                <p>Frontend & Backend Web Development</p>
+            </div>
+
+            <div class="about-text">
+
+                <p>
+                    I am <strong>Kanchi Pavani</strong>, a Computer Science
+                    Engineering graduate from Sree Rama Engineering College,
+                    Tirupati, with an academic score of 80%.
+                </p>
+
+                <p>
+                    I am passionate about software development and enjoy
+                    creating clean, responsive and user-friendly web
+                    applications.
+                </p>
+
+                <p>
+                    My technical skills include HTML5, CSS, JavaScript,
+                    Java, SQL, Oracle SQL, Git and GitHub. I am currently
+                    focused on growing my skills as a Full Stack Developer.
+                </p>
+
+            </div>
 
         </div>
 
@@ -86,52 +155,61 @@
 
 
     <!-- Skills -->
-    <section id="skills">
+    <section id="skills" class="section skills-section">
 
-        <h2 class="section-title">My Skills</h2>
+        <div class="section-title">
+            <p>What I Work With</p>
+            <h2>My Skills</h2>
+        </div>
 
         <div class="skills-container">
 
-            <div class="skill">
-                <h3>HTML</h3>
-                <div class="progress">
-                    <span style="width: 90%;"></span>
-                </div>
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <p>Structure & Semantic Web</p>
             </div>
 
-            <div class="skill">
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
                 <h3>CSS</h3>
-                <div class="progress">
-                    <span style="width: 85%;"></span>
-                </div>
+                <p>Responsive Web Design</p>
             </div>
 
-            <div class="skill">
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
                 <h3>JavaScript</h3>
-                <div class="progress">
-                    <span style="width: 80%;"></span>
-                </div>
+                <p>Interactive Web Applications</p>
             </div>
 
-            <div class="skill">
+            <div class="skill-card">
+                <i class="fab fa-java"></i>
                 <h3>Java</h3>
-                <div class="progress">
-                    <span style="width: 85%;"></span>
-                </div>
+                <p>Object-Oriented Programming</p>
             </div>
 
-            <div class="skill">
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
                 <h3>SQL</h3>
-                <div class="progress">
-                    <span style="width: 75%;"></span>
-                </div>
+                <p>Database Management</p>
             </div>
 
-            <div class="skill">
-                <h3>Git & GitHub</h3>
-                <div class="progress">
-                    <span style="width: 75%;"></span>
-                </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>Oracle SQL</h3>
+                <p>Queries & Database Operations</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git</h3>
+                <p>Version Control</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <p>Code Hosting & Collaboration</p>
             </div>
 
         </div>
@@ -140,63 +218,82 @@
 
 
     <!-- Projects -->
-    <section id="projects">
+    <section id="projects" class="section">
 
-        <h2 class="section-title">My Projects</h2>
+        <div class="section-title">
+            <p>What I've Built</p>
+            <h2>My Projects</h2>
+        </div>
 
         <div class="projects-container">
 
-            <!-- Project 1 -->
+            <!-- Expense Tracker -->
             <div class="project-card">
 
-                <h3>Expense Tracker</h3>
-
-                <p>
-                    A web application to manage income and expenses,
-                    calculate balance and track financial transactions.
-                </p>
-
-                <div class="technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
+                <div class="project-icon">
+                    <i class="fas fa-wallet"></i>
                 </div>
 
-                <a href="#" class="project-btn">GitHub</a>
-                <a href="#" class="project-btn">Live Demo</a>
+                <div class="project-content">
 
-            </div>
-                <div class="technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>API</span>
+                    <h3>Expense Tracker</h3>
+
+                    <p>
+                        A simple web application for managing income
+                        and expenses. Users can add transactions,
+                        calculate their balance and delete transactions.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>LocalStorage</span>
+                    </div>
+
+                    <a href="https://github.com/kanchiPavani08"
+                       target="_blank"
+                       class="project-link">
+                        View Project
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
                 </div>
 
-                <a href="#" class="project-btn">GitHub</a>
-                <a href="#" class="project-btn">Live Demo</a>
-
             </div>
 
 
-            <!-- Project 3 -->
+            <!-- Portfolio -->
             <div class="project-card">
 
-                <h3>Quiz Application</h3>
-
-                <p>
-                    An interactive quiz application with multiple-choice
-                    questions and score calculation.
-                </p>
-
-                <div class="technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
+                <div class="project-icon">
+                    <i class="fas fa-laptop-code"></i>
                 </div>
 
-                <a href="#" class="project-btn">GitHub</a>
-                <a href="#" class="project-btn">Live Demo</a>
+                <div class="project-content">
+
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        A responsive personal portfolio website
+                        showcasing my skills, education, projects
+                        and contact information.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a href="https://github.com/kanchiPavani08"
+                       target="_blank"
+                       class="project-link">
+                        View Project
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
 
             </div>
 
@@ -206,21 +303,40 @@
 
 
     <!-- Education -->
-    <section id="education">
+    <section id="education" class="section education-section">
 
-        <h2 class="section-title">Education</h2>
+        <div class="section-title">
+            <p>My Academic Journey</p>
+            <h2>Education</h2>
+        </div>
 
         <div class="education-card">
 
-            <h3>Bachelor of Technology</h3>
+            <div class="education-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
 
-            <p>Computer Science and Engineering</p>
+            <div>
 
-            <p>2022 - 2026</p>
+                <h3>Bachelor of Technology</h3>
 
-            <p>
-                Sree Rama Engineering College, Tirupati
-            </p>
+                <h4>
+                    Computer Science & Engineering
+                </h4>
+
+                <p>
+                    Sree Rama Engineering College
+                </p>
+
+                <p>
+                    Tirupati
+                </p>
+
+                <div class="percentage">
+                    80%
+                </div>
+
+            </div>
 
         </div>
 
@@ -228,26 +344,58 @@
 
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section contact-section">
 
-        <h2 class="section-title">Contact Me</h2>
+        <div class="section-title">
+            <p>Let's Connect</p>
+            <h2>Contact Me</h2>
+        </div>
 
         <div class="contact-container">
 
             <div class="contact-info">
 
-                <h3>Let's Connect</h3>
+                <h3>Get In Touch</h3>
 
                 <p>
-                    If you would like to discuss an opportunity or
-                    connect with me, feel free to contact me.
+                    I'm open to opportunities where I can learn,
+                    contribute and grow as a Full Stack Developer.
                 </p>
 
-                <p>📧 pavanikanchi2004@gmail.com</p>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
 
-                <p>💻 GitHub: https://github.com/kanchiPavani08</p>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:pavanikanchi2004@gmail.com">
+                            pavanikanchi2004@gmail.com
+                        </a>
+                    </div>
+                </div>
 
-                <p>🔗 LinkedIn: https://www.linkedin.com/in/pavani-kanchi-3344022a9</p>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+
+                    <div>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/kanchiPavani08"
+                           target="_blank">
+                            github.com/kanchiPavani08
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/pavani-kanchi-3344022a9"
+                           target="_blank">
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                </div>
 
             </div>
 
@@ -258,24 +406,21 @@
                     type="text"
                     id="name"
                     placeholder="Your Name"
-                    required
-                >
+                    required>
 
                 <input
                     type="email"
                     id="email"
                     placeholder="Your Email"
-                    required
-                >
+                    required>
 
                 <textarea
                     id="message"
-                    rows="5"
+                    rows="6"
                     placeholder="Your Message"
-                    required
-                ></textarea>
+                    required></textarea>
 
-                <button type="submit" class="btn">
+                <button type="submit" class="btn primary-btn">
                     Send Message
                 </button>
 
@@ -289,9 +434,37 @@
     <!-- Footer -->
     <footer>
 
-        <p>
-            © 2026 Pavani Kanchi. All Rights Reserved.
-        </p>
+        <div class="footer-content">
+
+            <h3>Kanchi<span>.</span></h3>
+
+            <p>
+                Aspiring Full Stack Developer
+            </p>
+
+            <div class="footer-social">
+
+                <a href="https://github.com/kanchiPavani08"
+                   target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/pavani-kanchi-3344022a9"
+                   target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:pavanikanchi2004@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Kanchi Pavani. All Rights Reserved.
+            </p>
+
+        </div>
 
     </footer>
 

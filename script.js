@@ -1,48 +1,83 @@
-// Mobile menu
+// Mobile Navigation
 
-const menuBtn = document.getElementById("menuBtn");
+const menuIcon = document.getElementById("menuIcon");
 const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
+menuIcon.addEventListener("click", () => {
     navLinks.classList.toggle("active");
-
-    if (navLinks.classList.contains("active")) {
-        menuBtn.textContent = "✕";
-    } else {
-        menuBtn.textContent = "☰";
-    }
 });
 
 
-// Close menu when clicking a link
+// Close menu after clicking a link
 
 const links = document.querySelectorAll(".nav-links a");
 
 links.forEach(link => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("active");
-        menuBtn.textContent = "☰";
     });
 });
 
 
-// Dark mode
+// Typing Effect
 
-const themeBtn = document.getElementById("themeBtn");
+const typingElement = document.getElementById("typing");
 
-themeBtn.addEventListener("click", () => {
+const roles = [
+    "Full Stack Developer",
+    "Java Developer",
+    "Web Developer"
+];
 
-    document.body.classList.toggle("dark");
+let roleIndex = 0;
+let characterIndex = 0;
+let deleting = false;
 
-    if (document.body.classList.contains("dark")) {
-        themeBtn.textContent = "☀️";
+function typeEffect() {
+
+    const currentRole = roles[roleIndex];
+
+    if (!deleting) {
+
+        typingElement.textContent =
+            currentRole.substring(0, characterIndex + 1);
+
+        characterIndex++;
+
+        if (characterIndex === currentRole.length) {
+
+            deleting = true;
+
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+
     } else {
-        themeBtn.textContent = "🌙";
+
+        typingElement.textContent =
+            currentRole.substring(0, characterIndex - 1);
+
+        characterIndex--;
+
+        if (characterIndex === 0) {
+
+            deleting = false;
+
+            roleIndex++;
+
+            if (roleIndex === roles.length) {
+                roleIndex = 0;
+            }
+        }
     }
-});
+
+    setTimeout(typeEffect, deleting ? 50 : 100);
+}
+
+typeEffect();
 
 
-// Contact form validation
+// Contact Form
 
 const contactForm = document.getElementById("contactForm");
 
@@ -59,15 +94,10 @@ contactForm.addEventListener("submit", function(event) {
         return;
     }
 
-    const emailPattern =
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailPattern.test(email)) {
-        alert("Please enter a valid email address.");
-        return;
-    }
-
-    alert("Thank you! Your message has been submitted.");
+    alert(
+        "Thank you, " + name +
+        "! Your message has been received."
+    );
 
     contactForm.reset();
 });
