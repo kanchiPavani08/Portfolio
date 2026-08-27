@@ -1,58 +1,78 @@
-# Personal Portfolio Website
+# 🌐 Kanchi Pavani - Personal Portfolio
 
-A responsive personal portfolio website built using HTML, CSS, and JavaScript. It showcases my skills, education, projects, and contact information.
+Welcome to my personal portfolio website! This portfolio showcases my skills, education, projects, and professional profile as a Full Stack Developer.
 
-## 🚀 Features
+## 👩‍💻 About Me
 
-- Responsive design for desktop and mobile
-- Home section with introduction
-- About Me section
-- Skills section with progress bars
-- Projects section
-- Education section
-- Contact section
-- Dark/Light mode
-- Mobile navigation menu
-- Contact form validation
-- Smooth scrolling
+I'm **Kanchi Pavani**, a B.Tech Computer Science graduate passionate about web development and software development.
 
-## 🛠️ Technologies Used
+I enjoy building responsive, user-friendly applications and continuously improving my technical skills.
 
+## 🛠️ Skills
+
+### Frontend
 - HTML5
 - CSS3
 - JavaScript
 
-## 📂 Project Structure
+### Programming
+- Java
+- Python
+- JavaScript
 
-portfolio/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+### Database
+- Oracle SQL
+- MySQL
+- SQL
 
-## ▶️ How to Run
+### Backend
+- Java
+- REST APIs
 
-1. Clone the repository:
+### Tools & Version Control
+- Git
+- GitHub
+- Visual Studio Code
 
-   git clone https://github.com/yourusername/portfolio.git
+## 🎓 Education
 
-2. Open the project folder.
+**B.Tech in Computer Science**  
+Sree Rama Engineering College, Tirupati, Andhra Pradesh  
+2022 – 2026  
+CGPA: **8.0 / 10**
 
-3. Open `index.html` in your browser.
+**Intermediate – MPC**  
+Sri Chaitanya Junior College, Tirupati, Andhra Pradesh  
+2020 – 2022  
+CGPA: **9.05 / 10**
 
-## 📸 Project Preview
+**10th Class (SSC)**  
+Sri Venkateswara High School, Tirupati, Andhra Pradesh  
+2019 – 2020  
+GPA: **9.7 / 10**
 
-Add screenshots of your portfolio here.
+## 📂 Projects
 
-## 🔗 Live Demo
+### 💰 Expense Tracker
+A web-based expense tracking application that helps users manage and monitor their expenses.
 
-Add your deployed website link here.
+**Technologies:** HTML, CSS, JavaScript
 
-## 👩‍💻 Author
+### 🌐 Personal Portfolio
+A responsive personal portfolio website showcasing my skills, education, projects, and professional profile.
 
-Pavani Kanchi
+**Technologies:** HTML5, CSS3, JavaScript
 
-GitHub: https://github.com/kanchiPavani08
+## 🔗 Connect With Me
 
-LinkedIn: https://www.linkedin.com/in/pavani-kanchi-3344022a9
+- **GitHub:** https://github.com/kanchiPavani08
+- **LinkedIn:** https://www.linkedin.com/in/pavani-kanchi-3344022a
+- **Email:** pavanikanchi2004@gmail.com
+
+## 🚀 Technologies Used
+
+HTML5 | CSS3 | JavaScript | Java | SQL | Git | GitHub
+
+---
+
+⭐ Thank you for visiting my portfolio!
