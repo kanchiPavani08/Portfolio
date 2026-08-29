@@ -361,7 +361,7 @@ if (contactForm) {
 
             emailjs.sendForm(
                 "portfolio_gmail",
-                "template_web4tm",
+                "template_wecb4tm",
                 contactForm
             )
 
@@ -385,8 +385,7 @@ if (contactForm) {
                 );
 
                 alert(
-                    "Sorry, your message could not be sent. Please try again."
-                );
+                    "Sorry,Your message could not be sent. Please try again later."    );
 
             });
 
