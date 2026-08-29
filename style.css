@@ -771,6 +771,9 @@ header {
     transition: 0.3s;
 }
 
+
+/* Live Demo */
+
 .live-link {
     background: #7c3aed;
     color: #ffffff;
@@ -782,6 +785,9 @@ header {
 
     transform: translateY(-2px);
 }
+
+
+/* GitHub */
 
 .github-link {
     background: #f8fafc;
@@ -862,13 +868,11 @@ header {
 
 .education-step:hover {
     transform: translateY(-4px);
-
     border-color: #c4b5fd;
 }
 
 .education-step.active {
     border-color: #7c3aed;
-
     background: #faf5ff;
 }
 
@@ -1226,8 +1230,14 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    /* PHOTO VISIBLE ON TABLET */
     .hero-image {
-        display: none;
+        display: flex;
+    }
+
+    .circle {
+        width: 300px;
+        height: 300px;
     }
 }
 
@@ -1270,10 +1280,40 @@ footer {
 
     .hero {
         padding: 130px 25px 70px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 35px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    /* PHOTO VISIBLE ON MOBILE */
+    .hero-image {
+        display: flex;
+
+        width: 100%;
+
+        order: -1;
+    }
+
+    .circle {
+        width: 240px;
+        height: 240px;
     }
 
     .hero-buttons {
         flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 
     .about-container {
@@ -1303,16 +1343,13 @@ footer {
 
     /* =========================
        MOBILE EDUCATION
-       KEEP 3 CARDS HORIZONTAL
-       10th | Intermediate | B.Tech
+       10th | Inter | B.Tech
     ========================= */
 
     .education-timeline {
         grid-template-columns: repeat(3, 1fr);
 
         gap: 8px;
-
-        width: 100%;
 
         margin-bottom: 30px;
     }
@@ -1347,6 +1384,7 @@ footer {
         font-size: 19px;
     }
 
+
     .education-content {
         flex-direction: column;
 
@@ -1377,6 +1415,14 @@ footer {
 
     .hero {
         padding: 120px 20px 70px;
+
+        gap: 30px;
+    }
+
+    /* MOBILE PHOTO SIZE */
+    .circle {
+        width: 210px;
+        height: 210px;
     }
 
     .skills-container {
@@ -1387,30 +1433,20 @@ footer {
         flex-direction: column;
     }
 
-
-    /* =========================
-       SMALL MOBILE EDUCATION
-       STILL HORIZONTAL
-    ========================= */
+    /* Keep Education cards horizontal */
 
     .education-timeline {
         grid-template-columns: repeat(3, 1fr);
 
-        gap: 5px;
-
-        width: 100%;
+        gap: 6px;
     }
 
     .education-step {
-        padding: 12px 3px;
-
-        border-radius: 9px;
+        padding: 12px 4px;
     }
 
     .education-step h3 {
         font-size: 10px;
-
-        line-height: 1.25;
     }
 
     .step-number {
@@ -1419,12 +1455,10 @@ footer {
 
     .step-title {
         font-size: 7px;
-
-        margin-bottom: 4px;
     }
 
     .education-step > i {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     .education-content {
