@@ -1,4 +1,4 @@
-// // =========================
+// =========================
 // MOBILE MENU
 // =========================
 
@@ -301,8 +301,15 @@ educationSteps.forEach(step => {
 
 
 // =========================
-// CONTACT FORM
+// CONTACT FORM - EMAILJS
 // =========================
+
+// Initialize EmailJS
+
+emailjs.init({
+    publicKey: "McyMQymM7vKPS7C_"
+});
+
 
 const contactForm =
     document.getElementById(
@@ -315,7 +322,6 @@ if (contactForm) {
     contactForm.addEventListener(
         "submit",
         function(event) {
-
 
             event.preventDefault();
 
@@ -353,16 +359,36 @@ if (contactForm) {
             }
 
 
-            alert(
+            emailjs.sendForm(
+                "portfolio_gmail",
+                "template_wecb4tm",
+                contactForm
+            )
 
-                "Thank you, " +
-                name +
-                "! Your message has been received."
+            .then(function() {
 
-            );
+                alert(
+                    "Thank you, " +
+                    name +
+                    "! Your message has been sent successfully."
+                );
 
+                contactForm.reset();
 
-            contactForm.reset();
+            })
+
+            .catch(function(error) {
+
+                console.error(
+                    "EmailJS Error:",
+                    error
+                );
+
+                alert(
+                    "Sorry, your message could not be sent. Please try again."
+                );
+
+            });
 
         }
     );

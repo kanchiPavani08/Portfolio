@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -26,6 +27,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </head>
 
 
@@ -96,7 +100,8 @@
             Kanchi Pavani
         </h1>
 
-        <h2><span class="fixed-text">I'm a </span>
+        <h2>
+            <span class="fixed-text">I'm a </span>
             <span id="typing"></span>
         </h2>
 
@@ -111,7 +116,8 @@
 
         <div class="hero-buttons">
 
-            <a href="Resume.pdf" target="_blank"
+            <a href="Resume.pdf"
+               target="_blank"
                class="btn primary-btn">
 
                 View Resume
@@ -231,11 +237,10 @@
 
             <p>
 
-               I’m a Computer Science graduate with a keen interest in Full Stack Development and software engineering. I like creating clean, interactive websites and applications that are both practical and easy to use. My experience with <strong>Java, HTML, CSS, JavaScript, and SQL</strong> has helped me build a strong foundation in application development. I enjoy solving problems through code, exploring new technologies, and turning what I learn into projects. I’m looking forward to starting my career in the IT industry, where I can contribute to real-world projects, learn from experienced teams, and continuously grow as a developer.
+                I’m a Computer Science graduate with a keen interest in Full Stack Development and software engineering. I like creating clean, interactive websites and applications that are both practical and easy to use. My experience with <strong>Java, HTML, CSS, JavaScript, and SQL</strong> has helped me build a strong foundation in application development. I enjoy solving problems through code, exploring new technologies, and turning what I learn into projects. I’m looking forward to starting my career in the IT industry, where I can contribute to real-world projects, learn from experienced teams, and continuously grow as a developer.
+
             </p>
 
-
-            
         </div>
 
     </div>
@@ -471,9 +476,6 @@
                     MySQL
 
                 </div>
-
-
-                
 
             </div>
 
@@ -1120,23 +1122,33 @@
         </div>
 
 
-        <form>
+        <!-- EMAILJS CONTACT FORM -->
+
+        <form id="contactForm">
 
             <input type="text"
+                   id="name"
+                   name="name"
                    placeholder="Your Name"
                    required>
 
 
             <input type="email"
+                   id="email"
+                   name="email"
                    placeholder="Your Email"
                    required>
 
 
             <input type="text"
+                   id="subject"
+                   name="subject"
                    placeholder="Subject">
 
 
-            <textarea rows="6"
+            <textarea id="message"
+                      name="message"
+                      rows="6"
                       placeholder="Your Message"
                       required></textarea>
 
@@ -1153,9 +1165,13 @@
     </div>
 
 </section>
+
+
 <!-- =====================================================
-     JAVASCRIPT
+     EMAILJS
 ===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script src="script.js"></script>
 
