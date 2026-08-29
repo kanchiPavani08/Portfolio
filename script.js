@@ -1,4 +1,4 @@
-// =========================
+// // =========================
 // MOBILE MENU
 // =========================
 
@@ -9,11 +9,15 @@ const navLinks =
     document.getElementById("navLinks");
 
 
-menuIcon.addEventListener("click", () => {
+if (menuIcon && navLinks) {
 
-    navLinks.classList.toggle("active");
+    menuIcon.addEventListener("click", () => {
 
-});
+        navLinks.classList.toggle("active");
+
+    });
+
+}
 
 
 // Close mobile menu after clicking a link
@@ -26,7 +30,9 @@ navigationLinks.forEach(link => {
 
     link.addEventListener("click", () => {
 
-        navLinks.classList.remove("active");
+        if (navLinks) {
+            navLinks.classList.remove("active");
+        }
 
     });
 
@@ -62,6 +68,11 @@ let deleting = false;
 
 function typeEffect() {
 
+    if (!typingElement) {
+        return;
+    }
+
+
     const currentRole =
         roles[roleIndex];
 
@@ -86,7 +97,7 @@ function typeEffect() {
 
             setTimeout(
                 typeEffect,
-                1500
+                1200
             );
 
             return;
@@ -129,7 +140,7 @@ function typeEffect() {
 
         typeEffect,
 
-        deleting ? 50 : 100
+        deleting ? 50 : 50
 
     );
 
@@ -156,6 +167,11 @@ skillCategories.forEach(category => {
         category.querySelector(
             ".skill-header"
         );
+
+
+    if (!header) {
+        return;
+    }
 
 
     header.addEventListener(
@@ -258,13 +274,16 @@ educationSteps.forEach(step => {
             );
 
 
-            // Show selected details
+            // Find education content
+            // using data-content
 
             const selectedContent =
-                document.getElementById(
-                    target
+                document.querySelector(
+                    `.education-content[data-content="${target}"]`
                 );
 
+
+            // Show selected details
 
             if (selectedContent) {
 
@@ -291,57 +310,61 @@ const contactForm =
     );
 
 
-contactForm.addEventListener(
-    "submit",
-    function(event) {
+if (contactForm) {
+
+    contactForm.addEventListener(
+        "submit",
+        function(event) {
 
 
-        event.preventDefault();
+            event.preventDefault();
 
 
-        const name =
-            document.getElementById(
-                "name"
-            ).value.trim();
+            const name =
+                document.getElementById(
+                    "name"
+                ).value.trim();
 
 
-        const email =
-            document.getElementById(
-                "email"
-            ).value.trim();
+            const email =
+                document.getElementById(
+                    "email"
+                ).value.trim();
 
 
-        const message =
-            document.getElementById(
-                "message"
-            ).value.trim();
+            const message =
+                document.getElementById(
+                    "message"
+                ).value.trim();
 
 
-        if (
-            name === "" ||
-            email === "" ||
-            message === ""
-        ) {
+            if (
+                name === "" ||
+                email === "" ||
+                message === ""
+            ) {
+
+                alert(
+                    "Please fill in all fields."
+                );
+
+                return;
+
+            }
+
 
             alert(
-                "Please fill in all fields."
+
+                "Thank you, " +
+                name +
+                "! Your message has been received."
+
             );
 
-            return;
+
+            contactForm.reset();
 
         }
+    );
 
-
-        alert(
-
-            "Thank you, " +
-            name +
-            "! Your message has been received."
-
-        );
-
-
-        contactForm.reset();
-
-    }
-);
+}
