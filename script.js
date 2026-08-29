@@ -361,7 +361,7 @@ if (contactForm) {
 
             emailjs.sendForm(
                 "portfolio_gmail",
-                "template_wecb4tm",
+                "template_web4tm",
                 contactForm
             )
 
