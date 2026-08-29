@@ -1,78 +1,55 @@
-# 🌐 Kanchi Pavani - Personal Portfolio
+## 🌐 Personal Portfolio Website
 
-Welcome to my personal portfolio website! This portfolio showcases my skills, education, projects, and professional profile as a Full Stack Developer.
+A responsive personal portfolio website showcasing my skills, projects, education, and contact information. The website also includes a working contact form integrated with EmailJS.
 
-## 👩‍💻 About Me
+## 🚀 Live Demo
 
-I'm **Kanchi Pavani**, a B.Tech Computer Science graduate passionate about web development and software development.
+[View Portfolio](https://kanchipavaniportfolio.vercel.app)
 
-I enjoy building responsive, user-friendly applications and continuously improving my technical skills.
+## 📌 About the Project
 
-## 🛠️ Skills
+This portfolio website is designed to present my profile as a software developer and provide an easy way for recruiters and visitors to learn about my:
 
-### Frontend
-- HTML5
-- CSS3
-- JavaScript
+- 👩‍💻 Skills
+- 🎓 Education
+- 💼 Projects
+- 📜 Certifications
+- 📞 Contact Information
 
-### Programming
-- Java
-- Python
-- JavaScript
+The contact form allows visitors to send messages directly through email using EmailJS.
 
-### Database
-- Oracle SQL
-- MySQL
-- SQL
+## 🛠️ Technologies Used
 
-### Backend
-- Java
-- REST APIs
+- **HTML5** – Structure of the website
+- **CSS3** – Styling and responsive design
+- **JavaScript** – Interactivity and form handling
+- **EmailJS** – Sending contact form messages directly to email
+- **Git & GitHub** – Version control and project hosting
 
-### Tools & Version Control
-- Git
-- GitHub
-- Visual Studio Code
+## ✨ Features
 
-## 🎓 Education
+- Responsive portfolio design
+- Navigation between different sections
+- About Me section
+- Skills section
+- Education section
+- Projects section
+- Certifications section
+- Contact section
+- Working contact form
+- EmailJS integration
+- Success and error messages
+- GitHub and LinkedIn links
+- Mobile-friendly layout
 
-**B.Tech in Computer Science**  
-Sree Rama Engineering College, Tirupati, Andhra Pradesh  
-2022 – 2026  
-CGPA: **8.0 / 10**
+## 📂 Project Structure
 
-**Intermediate – MPC**  
-Sri Chaitanya Junior College, Tirupati, Andhra Pradesh  
-2020 – 2022  
-CGPA: **9.05 / 10**
-
-**10th Class (SSC)**  
-Sri Venkateswara High School, Tirupati, Andhra Pradesh  
-2019 – 2020  
-GPA: **9.7 / 10**
-
-## 📂 Projects
-
-### 💰 Expense Tracker
-A web-based expense tracking application that helps users manage and monitor their expenses.
-
-**Technologies:** HTML, CSS, JavaScript
-
-### 🌐 Personal Portfolio
-A responsive personal portfolio website showcasing my skills, education, projects, and professional profile.
-
-**Technologies:** HTML5, CSS3, JavaScript
-
-## 🔗 Connect With Me
-
-- **GitHub:** https://github.com/kanchiPavani08
-- **LinkedIn:** https://www.linkedin.com/in/pavani-kanchi-3344022a
-- **Email:** pavanikanchi2004@gmail.com
-
-## 🚀 Technologies Used
-
-HTML5 | CSS3 | JavaScript | Java | SQL | Git | GitHub
-
----
-
-⭐ Thank you for visiting my portfolio!
+```text
+Portfolio/
+│
+├── index.html
+├── style.css
+├── script.js
+├── images/
+│   └── ...
+└── README.md
