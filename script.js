@@ -307,7 +307,7 @@ educationSteps.forEach(step => {
 // Initialize EmailJS
 
 emailjs.init({
-    publicKey: "McyMQymM7vKPS7C_"
+    publicKey: "McyMQymM7vKPS7C_-"
 });
 
 
@@ -385,7 +385,8 @@ if (contactForm) {
                 );
 
                 alert(
-                    "Sorry,Your message could not be sent. Please try again later."    );
+                    "Sorry,We couldn't send your message. Please try again later."
+                );
 
             });
 
