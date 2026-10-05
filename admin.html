@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Visits</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        .admin-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        input {
+            padding: 10px;
+            width: 220px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="admin-box">
+    <h2>👁️ Portfolio Visits</h2>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter admin password"
+    >
+
+    <br>
+
+    <button onclick="checkVisits()">View Visits</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+async function checkVisits() {
+    const password = document.getElementById("password").value;
+    const result = document.getElementById("result");
+
+    result.textContent = "Checking...";
+
+    try {
+        const response = await fetch("/api/admin-visits", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ password })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            result.textContent = "❌ Invalid password";
+            return;
+        }
+
+        result.textContent = "👁️ Total Visits: " + data.visits;
+
+    } catch (error) {
+        result.textContent = "❌ Something went wrong";
+    }
+}
+</script>
+
+</body>
+</html>
