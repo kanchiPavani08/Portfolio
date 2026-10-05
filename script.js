@@ -395,7 +395,6 @@ if (contactForm) {
 
 }
 
-}
  
 // Count one visit per browser tab/session
 if (!sessionStorage.getItem("portfolioVisitCounted")) {
