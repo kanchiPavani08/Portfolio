@@ -19,12 +19,21 @@ export default async function handler(req, res) {
   }
 
   // Check admin password
-  if (password !== process.env.ADMIN_PASSWORD) {
-    return res.status(401).json({
-      success: false,
-      error: "Invalid password"
-    });
-  }
+  if (!process.env.ADMIN_PASSWORD) {
+  return res.status(500).json({
+    success: false,
+    error: "ADMIN_PASSWORD is missing"
+  });
+}
+
+if (password !== process.env.ADMIN_PASSWORD) {
+  return res.status(401).json({
+    success: false,
+    error: "Password mismatch",
+    configured: true,
+    enteredLength: password?.length || 0
+  });
+}
 
   try {
     const response = await fetch(
