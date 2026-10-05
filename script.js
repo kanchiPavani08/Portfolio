@@ -394,3 +394,22 @@ if (contactForm) {
     );
 
 }
+
+}
+ 
+// Count one visit per browser tab/session
+if (!sessionStorage.getItem("portfolioVisitCounted")) {
+    fetch("/api/visit", {
+        method: "POST"
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            sessionStorage.setItem("portfolioVisitCounted", "true");
+            console.log("Visit counted:", data.visits);
+        }
+    })
+    .catch(error => {
+        console.error("Visit counter error:", error);
+    });
+}
