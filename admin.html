@@ -80,7 +80,7 @@ async function checkVisits() {
         const data = await response.json();
 
         if (!response.ok) {
-            result.textContent = "❌ Invalid password";
+            result.textContent = "❌"+(data.error || "Request failed");
             return;
         }
 
